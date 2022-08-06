@@ -57,6 +57,11 @@ const nested = fromJS({ a: { b: { c: [3, 4, 5] } } });
 
 console.log(nested);
 
+const mergedNested = nested.mergeDeep({ a: { b: { d: 6 } } });
+
+console.log(mergedNested);
+console.log(mergedNested.getIn(['a', 'b', 'd']));
+
 import { Set } from 'immutable';
 
 const mapAsKey1 = Map({ a: 1, b: 2, c: 3 });
